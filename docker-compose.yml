@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fast-livo2:
+    build: .
+    image: fast-livo2-img
+    container_name: fast-livo2
+    privileged: true
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./results:/root/results
+      - ./fast_livo2_sim:/root/catkin_ws/src/fast_livo2_sim
+    devices:
+      - /dev/dri:/dev/dri
+    stdin_open: true
+    tty: true

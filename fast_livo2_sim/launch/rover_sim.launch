@@ -1,0 +1,14 @@
+<launch>
+  <env name="GAZEBO_MODEL_PATH" value="$(find fast_livo2_sim)/models:$(optenv GAZEBO_MODEL_PATH)" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find fast_livo2_sim)/worlds/forest.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="verbose" value="true"/>
+  </include>
+
+  <node name="spawn_rover" pkg="gazebo_ros" type="spawn_model"
+        args="-sdf -file $(find fast_livo2_sim)/models/livo_rover/model.sdf -model livo_rover -x 0 -y 0 -z 0.15"
+        output="screen"/>
+</launch>

@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="forest">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Trees as cylinders -->
+    <model name="tree_1">
+      <static>true</static>
+      <pose>3 2 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.4 0.25 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="tree_2">
+      <static>true</static>
+      <pose>5 -1 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.2</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.4 0.25 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.2</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="tree_3">
+      <static>true</static>
+      <pose>7 3 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.35 0.2 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="tree_4">
+      <static>true</static>
+      <pose>-2 4 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.18</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.4 0.25 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.18</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="tree_5">
+      <static>true</static>
+      <pose>10 0 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.4 0.25 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.15</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="tree_6">
+      <static>true</static>
+      <pose>8 -4 1 0 0 0</pose>
+      <link name="trunk">
+        <visual name="v"><geometry><cylinder><radius>0.2</radius><length>2</length></cylinder></geometry>
+        <material><ambient>0.35 0.2 0.1 1</ambient></material></visual>
+        <collision name="c"><geometry><cylinder><radius>0.2</radius><length>2</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="wall_1">
+      <static>true</static>
+      <pose>6 6 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="v"><geometry><box><size>4 0.2 1</size></box></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>4 0.2 1</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <model name="box_1">
+      <static>true</static>
+      <pose>-3 -3 0.5 0 0 0.3</pose>
+      <link name="link">
+        <visual name="v"><geometry><box><size>1 1 1</size></box></geometry>
+        <material><ambient>0.8 0.3 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>1 1 1</size></box></geometry></collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>
